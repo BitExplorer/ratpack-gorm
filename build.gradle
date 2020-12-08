@@ -23,14 +23,12 @@ repositories {
 
 dependencies {
 
-    compile ratpack.dependency("guice")
-    //   compile ratpack.dependency("jackson")
-    compile ratpack.dependency("rx")
-//    compile ratpack.dependency("hystrix")
-    compile ratpack.dependency("hikari")
-    compile ratpack.dependency("h2")
-    implementation "com.h2database:h2:${h2Version}"
-    implementation 'org.jooq:jooq:3.14.4'
+    implementation ratpack.dependency("guice")
+    //   implementation ratpack.dependency("jackson")
+    implementation ratpack.dependency("rx")
+//    implementation ratpack.dependency("hystrix")
+    implementation ratpack.dependency("hikari")
+
     runtimeOnly('org.slf4j:slf4j-simple:1.7.30')
 
     //Groovy
@@ -43,7 +41,9 @@ dependencies {
     //postgres
     runtimeOnly("org.postgresql:postgresql:${postgresqlVersion}")
 
-    implementation group: 'com.h2database', name: 'h2', version: '1.4.200'
+    // Jooq
+    //implementation 'org.jooq:jooq:3.14.4'
+
     //hibernate
     //implementation("org.hibernate:hibernate-core:${hibernateVersion}")
     implementation("org.grails:grails-datastore-gorm-hibernate5:7.0.1.RELEASE")
