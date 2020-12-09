@@ -16,7 +16,7 @@ class RatpackGormSpec extends Specification {
     @Delegate
     TestHttpClient client = test.httpClient
 
-    void "Get data from database"() {
+    void 'Get data from database'() {
         when:
         get()
 
@@ -30,7 +30,7 @@ class RatpackGormSpec extends Specification {
 
         then:
         json.size() == 3
-        json*.firstName == ['Matthew', 'brian', 'Kathryn']
-        json*.lastName == ['Henning', 'henning', 'Henning']
+        json*.firstName == ['Kathryn', 'Matthew', 'Brian']
+        json*.lastName == ['Henning', 'Henning', 'Henning']
     }
 }
